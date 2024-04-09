@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link th:href="@{/styles.css}" rel="stylesheet" />
+        <script type="text/javascript" th:src="@{/js.js}" defer></script>
+        <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous" defer></script>
+    </head>
+
+    <body>
+
+    <th:block th:insert="~{menu :: dodajCzlonka}"></th:block>
+
+    <h1 class="d-flex align-items-center justify-content-center ">Prototyp formularza do zapisu na rekolekcje:</h1>
+
+    <div class="d-flex align-items-center justify-content-center ">
+        <th:block th:insert="~{forms :: turnus}"></th:block>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center ">
+        <th:block th:insert="~{forms :: signUpParticipant}"></th:block>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center ">
+        <th:block th:insert="~{forms :: wspolmazonek}"></th:block>
+    </div>
+
+    </body>
+</html>

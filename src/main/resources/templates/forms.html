@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+
+    <div th:fragment="signInForm">
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div class="card shadow mb-3" th:fragment="turnus">
+        <h2>turnus</h2>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+            <label class="form-check-label" for="flexRadioDefault1">
+                data-od - data-do
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+                data-od - data-do
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <label class="form-check-label" for="flexRadioDefault3">
+                data-od - data-do
+            </label>
+        </div>
+    </div>
+
+    <div class="card shadow mb-3" th:fragment="signUpParticipant">
+        <h2>dane osobowe</h2>
+        <form>
+            <div class="d-flex flex-row">
+                <div class="mb-3 ">
+                    <label for="name" class="form-label">Imie</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="name">
+                </div>
+                <div class="mb-3 ">
+                    <label for="surname" class="form-label">Nazwisko</label>
+                    <input type="text" class="form-control" id="surname">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="dataUrodzenia">data urodzenia</label>
+                <input type="date" class="form-control" id="dataUrodzenia">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">email</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="phone">telefon</label>
+                <input type="text" class="form-control" id="phone">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="zawod">zawód</label>
+                <input type="text" class="form-control" id="zawod">
+            </div>
+            <th:block th:insert="~{::address}"></th:block>
+            <div>
+                <h3>Jestem w rodzine:</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="maz" checked>
+                    <label class="form-check-label" for="maz">
+                        Mężem
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="zona">
+                    <label class="form-check-label" for="zona">
+                        Żoną
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="retreat">Poprzednie Rekolekcje:</label>
+                <input type="text" class="form-control" id="retreat">
+            </div>
+
+            <div class="mb-3">
+                <h3>Czy chcesz utworzyc konto?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="account">
+                    <label class="form-check-label" for="account">
+                        tak?
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="wspolmazonek" class="card shadow mb-3" th:fragment="wspolmazonek">
+        <button type="button" class="btn-close position-absolute top-0 end-0 card" aria-label="Close"></button>
+        <h2>dane współmałżonka</h2>
+        <form>
+            <div class="d-flex flex-row">
+                <div class="mb-3 ">
+                    <label for="name1" class="form-label">Imie</label>
+                    <input type="text" class="form-control" id="name1" aria-describedby="name1">
+                </div>
+                <div class="mb-3 ">
+                    <label for="surname1" class="form-label">Nazwisko</label>
+                    <input type="text" class="form-control" id="surname1">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="dataUrodzeniaM">data urodzenia malzonka</label>
+                <input type="date" class="form-control" id="dataUrodzeniaM">
+            </div>
+            <div class="mb-3">
+                <label for="email1" class="form-label">email</label>
+                <input type="email" class="form-control" id="email1">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="phone1">telefon</label>
+                <input type="text" class="form-control" id="phone1">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="zawod1">zawód</label>
+                <input type="text" class="form-control" id="zawod1">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="malzenstwo">data zawarcia malzenstwa</label>
+                <input type="date" class="form-control" id="malzenstwo">
+            </div>
+        </form>
+    </div>
+
+    <div class="border" th:fragment="address">
+        <h4>dane adresowe:</h4>
+        <div class="mb-3">
+            <label class="form-label" for="ulica">ulica</label>
+            <input type="text" class="form-control" id="ulica">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="numer">numer</label>
+            <input type="text" class="form-control" id="numer">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="mieszkanie">mieszkanie</label>
+            <input type="text" class="form-control" id="mieszkanie">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="miasto">miasto</label>
+            <input type="text" class="form-control" id="miasto">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="kod">kod pocztowy</label>
+            <input type="text" class="form-control" id="kod">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="kraj">Kraj</label>
+            <input type="text" class="form-control" id="kraj">
+        </div>
+
+    </div>
+
+
+</body>
+</html>
